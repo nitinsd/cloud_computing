@@ -1,9 +1,3 @@
-Unzip Turnin
-Follows the Template provided in github
-Should contain the following artifacts:
-Turnin/src/main/java/edu/bu/cs755/Main.java
-Turnin/classes/*.class
-Turnin/java-8-example-0.1-SNAPSHOT-jar-with-dependencies.jar
 
 # Install maven - compile 
 To compile the project and create a single jar file with all dependencies: 
