@@ -47,7 +47,7 @@ filtered = wDStream.filter(checkForData)
 tupled = filtered.map(followers).map(lambda (x,y): (y,x))
 
 # sort by number of followers
-sorted = words.transform(lambda rdd: rdd.distinct().sortByKey(ascending=False))
+sorted = tupled.transform(lambda rdd: rdd.distinct().sortByKey(ascending=False))
 
 # reverse the key/value order for display
 result = sorted.map(lambda (x,y): (y,x))
