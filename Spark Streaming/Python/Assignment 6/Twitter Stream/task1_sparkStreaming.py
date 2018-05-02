@@ -14,7 +14,7 @@ def checkForData(tweet):
 
 def followers(tweet):
     msg = json.loads(tweet)
-    key = msg['user']['screen_name']
+    key = msg['user']['screen_name'] + " ----- " + msg['text']
     value = msg['user']['followers_count']
     return (key, value)
 
@@ -28,7 +28,7 @@ sc = SparkContext(conf=conf)
 sc.setLogLevel("FATAL")
 
 # create the Streaming Context from the above spark context with interval size 2 seconds
-ssc = StreamingContext(sc, 5)
+ssc = StreamingContext(sc, 2)
 
 # setting a checkpoint to allow RDD recovery
 ssc.checkpoint("checkpoint_TwitterApp")
@@ -37,6 +37,7 @@ ssc.checkpoint("checkpoint_TwitterApp")
 dataStream = ssc.socketTextStream("localhost", 7070)
 
 # tweets in batches of 20s each for the past 300s
+# DStream contains data for last 300 seconds
 wDStream = dataStream.window(300, 20)
 
 # filter out tweets that do not contain the word "data", doing it again even though 
