@@ -10,13 +10,13 @@ import json
 
 # Go to http://apps.twitter.com and create an app.
 # The consumer key and secret will be generated for you after
-consumer_key="JL04nWpU3YG4NDH85t6nzQKxM"
-consumer_secret="WUlWUpPfCPObv45naXhLqjGHkyspWsdbtqhjv4joV9KmquKoY3"
+consumer_key=""
+consumer_secret=""
 
 # After the step above, you will be redirected to your app's page.
 # Create an access token under the the "Your access token" section
-access_token="141400849-NfCF93hufJdiw0lYLv95BWpgXvx0DqxKp92uGwC3"
-access_token_secret="v0iYsV6SbrGMCZBoE2u6Nrbd3WxYRfmDcsztAkCsywyYL"
+access_token=""
+access_token_secret=""
 
 class TweetsListener(StreamListener):
   def __init__(self, csocket):
