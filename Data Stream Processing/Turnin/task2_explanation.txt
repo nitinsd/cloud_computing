@@ -1,6 +1,0 @@
-Twitter breaks news quicker than news channels. Example, when UR airways flight crashed on NYC's hudson river, Twitter broke the news before traditional media. This underscores Twitter's role in breaking news.
-So this task is to find the most useful and reliable source of breaking news. List the top 5 users with most retweets in the last 5 minutes.
-Whoever has the most re-tweets is the most reliable. Based on Google's idea that the page with most references wins. Similarly if you are re-tweeting someone, it means you trust them and hence whoever has the most re-tweets is the most reliable.
-The text of all re-tweets begin with "RT @<user>:". This user is the original author of the tweet. So I extract the <user> parameter from the text and count this users' occurence. 
-Then sort by most occurences. There is also a parameter called re-tweet count but I did not use that because most tweets had 0 re-tweets in real time. I wanted to find which user is being re-tweeted most right now. 
-The idea is I can then, if I want to, follow these reliable users on twitter and get breaking news from them.
